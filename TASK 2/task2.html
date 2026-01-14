@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Weekly Newsletter</title>
+    <style>
+        body { margin: 0; padding: 0; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; background-color: #f9f9f9; }
+        .wrapper { width: 100%; background-color: #f9f9f9; padding: 20px 0; }
+        .main { max-width: 600px; background-color: #ffffff; margin: 0 auto; border-radius: 8px; overflow: hidden; }
+        
+        /* Top Section (Cream Background) */
+        .hero-section { background-color: #ffeadd; padding: 40px 30px; text-align: left; position: relative; }
+        .logo { width: 50px; height: 50px; background: linear-gradient(45deg, #f03388, #ff6da5); border-radius: 12px; margin-bottom: 20px; }
+        .hero-text h1 { font-size: 24px; color: #333; margin: 0; }
+        .hero-text h2 { color: #f0336c; font-size: 20px; margin-top: 40px; }
+        .btn-orange { background-color: #ff1466; color: white; padding: 12px 24px; text-decoration: none; border-radius: 6px; display: inline-block; font-weight: bold; margin-top: 20px; font-size: 14px; }
+
+        /* Features Section */
+        .features { padding: 40px 30px; text-align: center; }
+        .features h3 { font-size: 12px; color: #f03395; text-transform: uppercase; letter-spacing: 1px; }
+        .features h2 { font-size: 22px; color: #222; margin-bottom: 30px; }
+        
+        .grid { display: table; width: 100%; border-spacing: 20px; }
+        .grid-item { display: table-cell; width: 50%; text-align: left; vertical-align: top; }
+        .icon-circle { width: 40px; height: 40px; border-radius: 50%; display: flex; align-items: center; justify-content: center; margin-bottom: 15px; color: white; font-size: 20px; line-height: 40px; text-align: center; }
+
+        /* Footer */
+        .footer { background-color: #ffeadd; padding: 30px; text-align: center; font-size: 12px; color: #666; }
+        
+        /* Mobile adjustment */
+        @media screen and (max-width: 480px) {
+            .grid-item { display: block; width: 100%; margin-bottom: 20px; }
+            .grid { border-spacing: 0; }
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="main">
+            <div class="hero-section">
+                <div class="logo"></div>
+                <div style="text-align: right; position: absolute; top: 40px; right: 30px;">
+                    <strong>Weekly Newsletter</strong>
+                </div>
+                <div class="hero-text">
+                    <h2>Don't miss out our BIG news!</h2>
+                    <p style="color: #666; max-width: 250px;">Check out the latest updates and features we have prepared just for you this week.</p>
+                    <a href="#" class="btn-orange">Go to your account!</a>
+                </div>
+            </div>
+
+            <div class="features">
+                <h3>New Releases</h3>
+                <h2>Checkout our amazing features</h2>
+                
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="icon-circle" style="background-color: #43d39e;">🕒</div>
+                        <strong>Timer</strong>
+                        <p style="font-size: 13px; color: #777;">Track your progress with our new smart timer feature.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="icon-circle" style="background-color: #ffbe0b;">📊</div>
+                        <strong>Measure tool</strong>
+                        <p style="font-size: 13px; color: #777;">Accurate data analytics right at your fingertips.</p>
+                    </div>
+                </div>
+
+                <div class="grid">
+                    <div class="grid-item">
+                        <div class="icon-circle" style="background-color: #ff5e14;">🎚️</div>
+                        <strong>Slider</strong>
+                        <p style="font-size: 13px; color: #777;">New interactive UI elements for better control.</p>
+                    </div>
+                    <div class="grid-item">
+                        <div class="icon-circle" style="background-color: #3b82f6;">👥</div>
+                        <strong>Users</strong>
+                        <p style="font-size: 13px; color: #777;">Manage your team and permissions easily.</p>
+                    </div>
+                </div>
+                
+                <a href="#" class="btn-orange">Go to your account!</a>
+            </div>
+
+            <div class="footer">
+                <p>You received this email because you signed up on our website.</p>
+                <a href="#" style="color: #333;">Unsubscribe</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

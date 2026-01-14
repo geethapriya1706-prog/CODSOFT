@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Festival Restaurant UI/UX Case Study</title>
+    <style>
+        :root {
+            --primary-orange: #FF9933;
+            --indian-green: #138808;
+            --dark-blue: #2C3E50;
+            --bg-body: #f4f7f6;
+            --phone-border: #333;
+        }
+
+        body {
+            background-color: var(--bg-body);
+            font-family: 'Segoe UI', sans-serif;
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .artboard-container {
+            display: flex;
+            gap: 40px;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .screen {
+            width: 320px;
+            height: 640px;
+            background: #ffffff;
+            border-radius: 40px;
+            position: relative;
+            overflow: hidden;
+            border: 8px solid var(--phone-border);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.15);
+        }
+
+        .screen-label {
+            text-align: center;
+            margin-top: 15px;
+            font-weight: bold;
+            color: #7F8C8D;
+            text-transform: uppercase;
+            font-size: 11px;
+            letter-spacing: 2px;
+        }
+
+        /* SCREEN 1: SPLASH */
+        .splash {
+            height: 100%;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.8)), 
+                        url('https://images.pexels.com/photos/1546039/pexels-photo-1546039.jpeg?auto=compress&cs=tinysrgb&w=600');
+            background-size: cover;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        .enter-btn {
+            margin-top: 30px;
+            padding: 12px 35px;
+            border: 2px solid white;
+            border-radius: 25px;
+            font-weight: bold;
+        }
+
+        /* SCREEN 2: MENU (Task 3 & 4) */
+        .search-box {
+            background: #f1f2f6; border-radius: 12px; padding: 12px;
+            margin: 10px 20px; font-size: 13px; color: #7f8c8d; border: 1px solid #eee;
+        }
+        .categories { display: flex; gap: 10px; padding: 10px 20px; overflow-x: auto; scrollbar-width: none; }
+        .pill { padding: 8px 18px; background: #fff; border: 1px solid #ddd; border-radius: 20px; font-size: 12px; white-space: nowrap; }
+        .pill.active { background: var(--primary-orange); color: white; border: none; font-weight: bold; }
+
+        .menu-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; padding: 20px; }
+        .food-card { background: white; border-radius: 18px; padding: 10px; box-shadow: 0 4px 10px rgba(0,0,0,0.05); }
+        .food-card img { width: 100%; height: 90px; border-radius: 12px; object-fit: cover; }
+        .food-name { font-size: 13px; font-weight: bold; margin: 8px 0 2px; color: #333; }
+        .food-price { color: var(--indian-green); font-weight: 800; font-size: 13px; }
+
+        /* SCREEN 3: DETAIL */
+        .detail-img { width: 100%; height: 40%; object-fit: cover; }
+        .detail-card {
+            background: white; margin-top: -30px; border-radius: 30px 30px 0 0;
+            padding: 25px; height: 60%; position: relative;
+        }
+        .add-btn {
+            position: absolute; bottom: 25px; left: 25px; right: 25px;
+            background: var(--indian-green); color: white; text-align: center;
+            padding: 18px; border-radius: 15px; font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h1 style="color: var(--dark-blue); margin-bottom: 40px;">Festival Restaurant UI/UX Flow</h1>
+
+    <div class="artboard-container">
+        
+        <div>
+            <div class="screen">
+                <div class="splash">
+                    <h2 style="font-size: 32px; margin-bottom: 5px;">Namaste</h2>
+                    <p>Welcome to the Festival of Tastes</p>
+                    <div class="enter-btn">ENTER MENU</div>
+                </div>
+            </div>
+            <div class="screen-label">01. Splash Screen</div>
+        </div>
+
+        <div>
+            <div class="screen">
+                <div style="padding: 30px 20px 10px;">
+                    <h2 style="margin: 0; color: var(--dark-blue);">The Menu</h2>
+                </div>
+                
+                <div class="search-box">🔍 Search traditional dishes...</div>
+                
+                <div class="categories">
+                    <div class="pill active">All</div>
+                    <div class="pill">Thali</div>
+                    <div class="pill">Sweets</div>
+                    <div class="pill">Snacks</div>
+                </div>
+
+                <div class="menu-grid">
+                    <div class="food-card">
+                        <img src="https://images.pexels.com/photos/2338407/pexels-photo-2338407.jpeg?auto=compress&cs=tinysrgb&w=300">
+                        <div class="food-name">Tandoori Mix</div>
+                        <div class="food-price">₹350</div>
+                    </div>
+                    <div class="food-card">
+                        <img src="https://images.pexels.com/photos/4449068/pexels-photo-4449068.jpeg?auto=compress&cs=tinysrgb&w=300">
+                        <div class="food-name">Samosa Box</div>
+                        <div class="food-price">₹120</div>
+                    </div>
+                    <div class="food-card" style="border: 1.5px solid var(--primary-orange);">
+                        <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=300">
+                        <div class="food-name">Butter Chicken</div>
+                        <div class="food-price">₹480</div>
+                    </div>
+                    <div class="food-card">
+                        <img src="https://images.pexels.com/photos/376464/pexels-photo-376464.jpeg?auto=compress&cs=tinysrgb&w=300">
+                        <div class="food-name">Gulab Jamun</div>
+                        <div class="food-price">₹90</div>
+                    </div>
+                </div>
+            </div>
+            <div class="screen-label">02. Menu Category</div>
+        </div>
+
+        <div>
+            <div class="screen">
+                <img src="https://images.pexels.com/photos/2474661/pexels-photo-2474661.jpeg?auto=compress&cs=tinysrgb&w=600" class="detail-img">
+                <div class="detail-card">
+                    <span style="background: #FFF4E5; color: #D35400; padding: 4px 10px; border-radius: 6px; font-size: 10px; font-weight: bold;">FESTIVAL SPECIAL ✨</span>
+                    <h2 style="margin: 12px 0 5px; color: var(--dark-blue);">Butter Chicken</h2>
+                    <h3 style="color: var(--indian-green); margin: 0;">₹480</h3>
+                    
+                    <p style="font-size: 13px; color: #7f8c8d; line-height: 1.6; margin-top: 15px;">
+                        Our signature rich and creamy tomato-based gravy with tender tandoori chicken pieces.
+                    </p>
+                    
+                    <h4 style="font-size: 13px; margin-top: 25px;">Portion Size</h4>
+                    <div style="display: flex; gap: 10px;">
+                        <div style="flex:1; border: 1px solid #ddd; text-align: center; padding: 10px; border-radius: 10px; font-size: 12px;">Half Portion</div>
+                        <div style="flex:1; border: 2px solid var(--primary-orange); text-align: center; padding: 10px; border-radius: 10px; font-size: 12px; font-weight: bold;">Full Portion</div>
+                    </div>
+
+                    <div class="add-btn">Add to Festival Plate</div>
+                </div>
+            </div>
+            <div class="screen-label">03. Item Details</div>
+        </div>
+
+    </div>
+
+</body>
+</html>
